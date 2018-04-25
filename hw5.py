@@ -7,15 +7,6 @@ import json
 import pickle
 import string
 
-def str_punc(word):
-	print(word)
-	if word in string.punctuation:
-		return False
-	else :
-		return True
-	end
-	
-
 def main(filename):
     # read file into lines
 	txtfile = open(filename)
