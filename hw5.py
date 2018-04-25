@@ -5,6 +5,17 @@ from collections import Counter
 import csv
 import json
 import pickle
+import string
+
+def str_punc(word):
+	print(word)
+	if word in string.punctuation:
+		return False
+	else :
+		return True
+	end
+	
+
 def main(filename):
     # read file into lines
 	txtfile = open(filename)
@@ -24,7 +35,8 @@ def main(filename):
 		for word in words:
             # then, remove (strip) unwanted punctuations from every word
 			# "dream." => "dream"
-			word = ''.join(list(filter(str.isalnum, word)))
+			
+			word = word.strip(string.punctuation)
             # check if word is not empty
 			
 			if word:
